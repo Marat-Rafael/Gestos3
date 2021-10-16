@@ -1,4 +1,4 @@
-/**
+/*
  * Cuando creas una instancia de un objeto GestureDetectorCompat,
  * uno de los parámetros que toma es una clase que implementa la interfaz
  * GestureDetector.OnGestureListener. GestureDetector.OnGestureListener
@@ -58,12 +58,13 @@ public class MainActivity extends Activity implements
 
         int x = (int) event.getX();
         int y = (int) event.getY();
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onDown");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onDown));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
+        // si retorna true sigue escuchando
         return true;
     }
 
@@ -74,12 +75,12 @@ public class MainActivity extends Activity implements
 
         int x = (int) event1.getX();
         int y = (int) event1.getY();
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onFling");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onFling));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
         return true;
     }
 
@@ -89,26 +90,26 @@ public class MainActivity extends Activity implements
 
         int x = (int) event.getX();
         int y = (int) event.getY();
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onFling");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onLongPress));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
     }
 
     @Override
     public boolean onScroll(MotionEvent event1, MotionEvent event2, float distanceX,
                             float distanceY) {
-        int x = (int) event2.getX();
-        int y = (int) event2.getY();
-        Log.d(DEBUG_TAG, "onScroll: " + event1.toString() + event2.toString());
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onScroll");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+
+        int x = (int) event1.getX();
+        int y = (int) event1.getY();
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onScroll));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
         return true;
     }
 
@@ -118,12 +119,12 @@ public class MainActivity extends Activity implements
 
         int x = (int) event.getX();
         int y = (int) event.getY();
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onShowPress");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onShowPress));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
     }
 
     @Override
@@ -132,12 +133,12 @@ public class MainActivity extends Activity implements
 
         int x = (int) event.getX();
         int y = (int) event.getY();
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onSingleTapUp");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onSingleTapUp));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
         return true;
     }
 
@@ -147,26 +148,27 @@ public class MainActivity extends Activity implements
 
         int x = (int) event.getX();
         int y = (int) event.getY();
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onDoubleTap");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onDoubleTap));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
         return true;
     }
 
     @Override
     public boolean onDoubleTapEvent(MotionEvent event) {
         Log.d(DEBUG_TAG, "onDoubleTapEvent: " + event.toString());
+
         int x = (int) event.getX();
         int y = (int) event.getY();
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onDoubleTapEvent");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onDoubleTapEvent));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
         return true;
     }
 
@@ -176,12 +178,12 @@ public class MainActivity extends Activity implements
 
         int x = (int) event.getX();
         int y = (int) event.getY();
-        tipoEvento = (TextView) findViewById(R.id.textEvento);
-        tipoEvento.setText("Evento: onSingleTapConfirmed");
-        mostrarCoordenadaX = (TextView) findViewById(R.id.textResultadoX);
-        mostrarCoordenadaX.setText("coordenada X: " + x);
-        mostrarCoordenadaY = (TextView) findViewById(R.id.textResultadoY);
-        mostrarCoordenadaY.setText("coordenada Y: " + y);
+        tipoEvento = findViewById(R.id.textEvento);
+        tipoEvento.setText(getString(R.string.onSingleTapConfirmed));
+        mostrarCoordenadaX =  findViewById(R.id.textResultadoX);
+        mostrarCoordenadaX.setText(getString(R.string.coordenada_x)+ x);
+        mostrarCoordenadaY =  findViewById(R.id.textResultadoY);
+        mostrarCoordenadaY.setText((getString(R.string.coordenada_y)) + y);
         return true;
     }
 }

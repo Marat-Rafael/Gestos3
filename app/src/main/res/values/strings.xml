@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">Gestos3</string>
-    <string name="coordenadas">coordenadas:</string>
+    <string name="coordenada_x">coordenada X : </string>
+    <string name="coordenada_y">coordenada Y : </string>
+    <string name="evento">Tipo de evento es : </string>
+    <string name="onDown">evento es: onDown</string>
+    <string name="onFling">evento es: onFling</string>
+    <string name="onLongPress">evento es: onLongPress</string>
+    <string name="onScroll">evento es: onScroll</string>
+    <string name="onShowPress">evento es: onShowPress</string>
+    <string name="onSingleTapUp">evento es: onSingleTapUp</string>
+    <string name="onDoubleTap">evento es: onDoubleTap</string>
+    <string name="onDoubleTapEvent">evento es: onDoubleTapEvent</string>
+    <string name="onSingleTapConfirmed">evento es: onSingleTapConfirmed</string>
+
+
+
 </resources>
